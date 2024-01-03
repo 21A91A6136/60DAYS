@@ -15,3 +15,20 @@ int main()
     reverse(a.begin(),a.end());
     std::cout << a << std::endl;
 }
+2) Count set bits
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int c,k=0;
+    cin>>c;
+    while(c)
+    {
+        if((c&1)>0)
+        {
+            k+=1;
+        }
+        c=c>>1;
+    }
+    cout<<k;
+}
