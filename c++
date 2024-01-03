@@ -1,3 +1,4 @@
+
 1) Convert number to binary in c++
 #include <bits/stdc++.h>
 using namespace std;
@@ -95,3 +96,45 @@ int main()
     int e = ceil(log10(n));
     cout<<e<<endl;
 }
+Q) unique number at which bit difference
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int A[n];
+    for(int i=0;i<n;i++){
+        cin>>A[i];
+    }
+    int ans = 0;
+    for(int i=0;i<n;i++){
+        int onecount=0;
+        for(int j=0;j<n;j++){
+            if((A[j]&(1<<i))>0) onecount++;
+        }
+        if(onecount%3!=0) ans = ans | (1<<i);
+    }
+    cout<<ans<<endl;
+}
+Q) count set bits in a range:
+class Solution{
+    public:
+    int Nearest2Power(int n)
+    {
+        int c=0;
+        while((1<<c)<=n)
+        {
+            c++;
+        }
+        return c-1;
+    }
+    int countSetBits(int n)
+    {
+        // Your logic here
+        if(n==0) return 0;
+        int x = Nearest2Power(n);
+        int ans = x*(1<<(x-1))+(n-(1<<x))+1+countSetBits(n-(1<<x));
+        return ans;
+    }
+};
