@@ -1,0 +1,17 @@
+General mistakes:
+1) Design an algorithm
+ Problem Solving+Maths
+2) Implementation - language
+#include <bits/stdc++>
+using namespace std;
+typedef vector<int>a;
+#define PB push_back
+#define REP(i,a,b) for(int i=a;i<=b;i++)
+int main()
+{
+    REP(i,1,10) cout << i << endl;
+    int a; // -2^31 to 2^31 or -10^9 to 10^9
+    long long b; //-2^63 to 2^63-1 or -10^18 to 10^18
+    int8_t c; //-128 to 127
+    
+}
