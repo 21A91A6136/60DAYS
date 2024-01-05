@@ -1,0 +1,26 @@
+Q) You will be given an array A of size N, you also given Q queries for each query L and R 
+Input:
+N = 6
+A = [7,1,5,2,3,9]
+3
+0 4
+1 5
+2 3
+OUTPUT:
+0
+0
+0
+Constraints:
+1) 1<=N<=10^6
+2) 1<=Q<=10^5
+3) D<=l<=r<=10^6
+Answer(without constraints):
+def ANDOperation(arr,l,r):
+    a = arr[l]
+    for i in range(l+1,r+1):
+        a&= arr[i]
+    return a
+arr=list(map(int,input().split()))
+for i in range(int(input())):
+    l,r = map(int,input().split())
+    print(ANDOperation(arr,l,r))
