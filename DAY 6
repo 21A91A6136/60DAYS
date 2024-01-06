@@ -1,0 +1,5 @@
+Shortest path length between two given nodes such that adjacent nodes are at bit difference 2
+N = 16
+a b
+A = [1,9,4,3]
+k=3
