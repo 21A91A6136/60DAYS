@@ -36,7 +36,7 @@ int main()
 __builtin_clz(a) - giveno of zeros from right 
 __builtin_ctz(a) - give no  of zeros from left
 __builtin_popcount(a) - counts the set bits
-__builtin_parity(a) - count odd&even bits
+__builtin_parity(a) - count whether bits are odd or even if even return 0 else 1
 int b = ceil(log2(n)); - required no of bits of a number;
 int least2power = (1<<(b-1)); - least 2 power
 next2power = (1<<b) - next 2 power
