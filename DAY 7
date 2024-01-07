@@ -10,3 +10,5 @@ f=0
 for i in range(1,n+1):
     f+=total(i)
 print(f)
+zfill - it is used  to represent the length of the number
+
