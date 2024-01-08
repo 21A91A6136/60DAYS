@@ -1,0 +1,40 @@
+
+/*
+struct Node {
+  int data;
+  struct Node *next;
+  Node(int x) {
+    data = x;
+    next = NULL;
+  }
+};
+*/
+
+//Function to insert a node in the middle of the linked list.
+Node* insertInMiddle(Node* head, int x)
+{
+	// Code here
+	Node* p=new Node(x);
+	if(head==NULL) return p;
+	Node* t=head;
+	Node* r=head;
+	while(r!=NULL and r->next!=NULL){
+	    t=t->next;
+	    r=r->next->next;
+	}
+	if(r!=NULL){
+	r=t->next;
+	t->next=p;
+	p->next=r;
+	}
+	else{
+	    r=head;
+	    while(r->next!=t){
+	        r=r->next;
+	    }
+	    r->next=p;
+	    p->next=t;
+	}
+	return head;
+	
+}
