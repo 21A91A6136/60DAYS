@@ -1,4 +1,40 @@
 we cannot store more than 10^8 size
+//factorial
+class Solution {
+public:
+    vector<int> factorial(int N){
+        vector<int>ve(100000,1);
+        ve[0]=1;
+        int k=1,j=0;
+        int c= 0;
+        
+        for (int i=1;i<=N;i++)
+        {
+            for (j=0;j<k;j++)
+            {
+                int val=(ve[j]*i)+c;
+                ve[j]=val%10;
+                c=val/10;
+                
+            }
+            while(c>=1)
+            {
+                ve[j]=c%10;
+                c/=10;
+                k=j;
+                j+=1;
+            }
+            k=j;
+        }
+        // code here
+        vector<int>res;
+        for(int p=k-1;p>=0;p--)
+        {
+            res.push_back(ve[p]);
+        }
+        return res;
+    }
+};
 factorial:
 n = int(input())
 s=1
