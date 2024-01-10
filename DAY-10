@@ -1,0 +1,29 @@
+* Congerence Module
+mod = 10^9+7
+a = b(mod m) mean a and m = b  and m
+a = b(mod m) if m means a-b
+* Little formats theorem
+a^(p-1)=(mod p)
+* Multiplicate Inverse
+5*5^-1 = 1
+5*5^1 = 1
+but real challenge comes when:
+a*a^-1 = 1 Mod a
+* Modular Arithematics: For bigger numbers
+(a+b)%mod = (a%mod+b%mod)%mod
+(a-b)%mod = (a%mod+mod-b%mod)%mod
+(a*b)%mod = (a%mod*b%mod)%mod
+(a/b)%mod = ((a%mod)/(b%mod))%mod we cannot apply for division for that we use:
+* Little formats theorem
+a^(p-1)=(mod p)
+a/b = (a*b^-1)%mod
+    inorder to find b^-1 we use multipicative inverse
+a = 2 n = 5
+2*? = 1(mod 5)
+sometimes this algo doesnot work
+when they are not satisified then, gcd(A,n)=1
+m = 10^9+7
+a^-1*a^(p-1) = a^-1(mod p)
+a^(p-2) = a^-1(mod p)
+ncr = ((n!)/((r!)*(n-r)!))%m
+powers a = 2 and b = 7
