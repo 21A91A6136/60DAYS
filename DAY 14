@@ -1,0 +1,41 @@
+matrix addition
+m=int(input())
+n=int(input())
+s=[]
+for i in range(m):
+    s.append(list(map(int,input().split())))
+e=[]
+for i in range(m):
+    e.append(list(map(int,input().split())))
+result = []
+for i in range(n):
+    c = []
+    for j in range(m):
+        c.append(s[i][j]+e[i][j])
+    result.append(c)
+print(result)
+//matrix subtraction
+m=int(input())
+n=int(input())
+s=[]
+for i in range(m):
+    s.append(list(map(int,input().split())))
+e=[]
+for i in range(m):
+    e.append(list(map(int,input().split())))
+result = []
+for i in range(n):
+    c = []
+    for j in range(m):
+        c.append(s[i][j]-e[i][j])
+    result.append(c)
+print(result)
+elements sum in a matrix
+m=int(input())
+n=int(input())
+s=0
+for i in range(m):
+    a = list(map(int,input().split()))
+    for j in range(n):
+        s+=a[j]
+print(s)
