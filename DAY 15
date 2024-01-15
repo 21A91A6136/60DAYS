@@ -1,0 +1,15 @@
+//matrix multiplication
+n, m = map(int, input().split())
+s = []
+for i in range(n):
+    s.append(list(map(int, input().split())))
+e = []
+for i in range(m):
+    e.append(list(map(int, input().split())))
+result = [[0 for _ in range(len(e[0]))] for _ in range(n)]
+for i in range(n):
+    for j in range(len(e[0])):
+        for k in range(m):
+            result[i][j] += s[i][k]*e[k][j]
+for row in result:
+    print(*row)
