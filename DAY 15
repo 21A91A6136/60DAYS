@@ -23,4 +23,4 @@ for i in n:
         print(j,end=" ")
 //inverse of a matrix
 //shortcut using numpy - np.linalg.inv(A)
-//shortcut using numpy - np.linalg.det(A)
+//shortcut for determinent using numpy - np.linalg.det(A)
