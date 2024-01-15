@@ -1,4 +1,5 @@
 //matrix multiplication
+//short cut in numpy - np.dot
 n, m = map(int, input().split())
 s = []
 for i in range(n):
@@ -13,3 +14,13 @@ for i in range(n):
             result[i][j] += s[i][k]*e[k][j]
 for row in result:
     print(*row)
+//matrix to array
+//shortcut using numpy- np.flatten
+n = [[1,2,3],
+     [1,2,3]]
+for i in n:
+    for j in i:
+        print(j,end=" ")
+//inverse of a matrix
+//shortcut using numpy - np.linalg.inv(A)
+//shortcut using numpy - np.linalg.det(A)
