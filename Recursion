@@ -1,0 +1,61 @@
+Recursion divides the code into  Two parts:
+1) Base Case
+2) Recursive case/call
+Factorial:
+def fact(n):
+#base case
+    if n==0:
+        return 1
+#recursion
+    return n*fact(n-1)
+n = int(input())
+print(fact(n))
+
+Fibbonaci:
+def fibb(n):
+    if n==0 or n==1:
+        return n
+    return fibb(n-1)+fibb(n-2)
+n = int(input())
+print(fibb(n))
+
+sorted of array
+def sortedofarray(arr,n):
+    if(n==0 or n==1):
+        return True
+    if(arr[0]<arr[1] and sortedofarray(arr[1:],n-1)):
+        return  True
+    return False
+arr = list(map(int,input().split()))
+n = int(input())
+print(sortedofarray(arr,n))
+
+Find first occurence of the key
+[2,4,7,6,8,7,9] key = 7
+def occurance(arr,key,n):
+    if n==0:
+        return -1
+    if(arr[0]==key):
+        return 0
+    s = occurance(arr[1:], key, n-1)
+    if(s==-1): return -1
+    return s+1
+arr = list(map(int,input().split()))
+key = int(input())
+n = int(input())
+print(occurance(arr,key,n))
+
+Last occurance of element
+def occurance(arr,key,n):
+    if n==0:
+        return -1
+    s = occurance(arr[1:], key, n-1)
+    if(s==-1):
+        if(arr[0]==key):
+            return 0
+        else: return -1
+    return s+1
+arr = list(map(int,input().split()))
+key = int(input())
+n = int(input())
+print(occurance(arr,key,n))
