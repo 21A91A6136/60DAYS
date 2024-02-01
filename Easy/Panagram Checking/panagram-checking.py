@@ -5,12 +5,14 @@ class Solution:
     #Function to check if a string is Pangram or not.
     def checkPangram(self,s):
         #code here
-        s=s.lower()
-        count=0
-        for i in range(97,123):
-            if chr(i) in s:
-                count+=1
-        if count==26:
+        s = s.lower()
+        c="abcdefghijklmnopqrstuvwxyz"
+        e=""
+        for i in s:
+            if i.isalpha():
+                e+=i
+        e = set(e)
+        if len(e)==26:
             return True
         else:
             return False
