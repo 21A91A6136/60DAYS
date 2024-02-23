@@ -3,3 +3,12 @@ N = 16
 a b
 A = [1,9,4,3]
 k=3
+curr_node = head
+    
+    while curr_node is not None:
+        if curr_node.next is not None and curr_node.next.data==curr_node.data:
+            curr_node.next=curr_node.next.next
+        else:
+            curr_node=curr_node.next
+    
+    return head
