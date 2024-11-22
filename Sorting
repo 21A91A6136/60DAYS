@@ -14,3 +14,13 @@ print(selection(n,arr))
 The time complexity is o(n^2) for best,worst,average cases.
 
 Bubble Sort:
+Swap the maximum number to the last
+def bubble(n,arr):
+    for i in range(n-1,0,-1):
+        for j in range(0,i):
+            if arr[j]>arr[j+1]:
+                arr[j],arr[j+1]=arr[j+1],arr[j]
+    return arr
+n = int(input())
+arr = list(map(int,input().split()))
+print(bubble(n,arr))
