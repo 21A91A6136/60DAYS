@@ -24,3 +24,22 @@ def bubble(n,arr):
 n = int(input())
 arr = list(map(int,input().split()))
 print(bubble(n,arr))
+The time complexity is
+best case - o(n)
+worst,average case = o(n^2)
+
+Insertion sort:
+Take an element and place it in its current order
+def insertion(n,arr):
+    for i in range(0,n+1):
+        j=i
+        while(j>0 and (arr[j-1]>arr[j])):
+            arr[j-1],arr[j] = arr[j],arr[j-1]
+            j=j-1
+    return arr
+n = int(input())
+arr = list(map(int,input().split()))
+print(insertion(n,arr))
+The time complexity is
+best case - o(n)
+worst,average case = o(n^2)
