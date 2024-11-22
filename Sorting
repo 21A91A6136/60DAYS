@@ -1,0 +1,13 @@
+Selection Sort:
+We select minimums
+def selection(n,arr):
+    for i in range(0,n-1):
+        mini = i
+        for j in range(i,n):
+            if arr[j]<arr[mini]:
+                mini = j
+        arr[i],arr[mini]=arr[mini],arr[i]
+    return arr
+n = int(input())
+arr = list(map(int,input().split()))
+print(selection(n,arr))
