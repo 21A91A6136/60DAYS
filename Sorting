@@ -11,3 +11,6 @@ def selection(n,arr):
 n = int(input())
 arr = list(map(int,input().split()))
 print(selection(n,arr))
+The time complexity is o(n^2) for best,worst,average cases.
+
+Bubble Sort:
